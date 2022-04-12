@@ -23,6 +23,10 @@
         font-size: 20px;
         font-weight: bold;
         }
+
+        li {
+            display: inline;
+        }
     </style>
 
 <body class="fundo">
@@ -35,15 +39,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'encontrar_jobs' %}">Encontrar job's</a>
-                        <a class="nav-link" href="{% url 'perfil' %}">Perfil</a>
+                    
+                        <li><a class="nav-link" href="{% url 'encontrar_jobs' %}">Encontrar job's</a></li>
+                        <li><a class="nav-link" href="{% url 'perfil' %}">Perfil</a></li>
                         {% if request.user.is_staff%}
-                            <a class="nav-link" href="{% url 'admin:index' %}">Administração</a>
+                            <a class="nav-link" href="{% url 'admin:index' %}">Administração</a></li>
                         {% endif %}
-                        <a class="nav-link" href="{% url 'sair' %}">Sair</a>
+                        <li><a class="nav-link" href="{% url 'sair' %}">Sair</a></li>
                         
-                    </li>
+                    
                 </ul>
             </div>
         </nav>
